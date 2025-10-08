@@ -39,7 +39,7 @@ const tools = computed<ToolCategory[]>(() => [
         <HeroGradient class="gradient" />
         <div class="text-wrapper">
           <div class="title">
-            IT - TOOLS
+            TOOLS
           </div>
           <div class="divider" />
           <div class="subtitle">
@@ -119,21 +119,6 @@ const tools = computed<ToolCategory[]>(() => [
         <div>
           <NavbarButtons v-if="!styleStore.isSmallScreen" />
         </div>
-
-        <c-tooltip position="bottom" :tooltip="$t('home.support')">
-          <c-button
-            round
-            href="https://www.buymeacoffee.com/cthmsst"
-            rel="noopener"
-            target="_blank"
-            class="support-button"
-            :bordered="false"
-            @click="() => tracker.trackEvent({ eventName: 'Support button clicked' })"
-          >
-            {{ $t('home.buyMeACoffee') }}
-            <NIcon v-if="!styleStore.isSmallScreen" :component="Heart" ml-2 />
-          </c-button>
-        </c-tooltip>
       </div>
       <slot />
     </template>
